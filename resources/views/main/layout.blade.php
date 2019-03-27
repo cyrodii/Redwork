@@ -70,12 +70,17 @@
                     <!-- Header Nav Start -->
                     <div id="headerNav" class="navbar-collapse collapse">
                         <div class="header--login-btn">
-                            <a href="login" class="btn--primary btn--ripple">Login</a>
+                            <a href="/login" class="btn--primary btn--ripple">Login</a>
                         </div>
                         
                         <ul class="nav navbar-nav navbar-right" id="top-menu">
-                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/">Home</a></li>
+                            
+                            <li><a href="/mission">Mission Statement</a></li>
+                            
+                            <li><a href="/charity">Charity</a></li>
 
+                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Header Nav End -->
@@ -97,6 +102,10 @@
 
     <script src="/js/all.min.js"></script>
     <script src="/js/app.js"></script>
-
+    <script>
+        $(function() {
+            $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent('li').addClass('active');
+        });
+    </script>
 </body>
 </html>

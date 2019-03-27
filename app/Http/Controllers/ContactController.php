@@ -14,9 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contact = ContactUs::all();
-         
-        // return view('main.contact', compact('contact'));
+        return view('main.contact');
     }
 
     /**
@@ -26,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('main.contact');
+        
     }
 
     /**

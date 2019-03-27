@@ -80,6 +80,10 @@
 
                             <li><a href="#pricing">Pricing</a></li>
 
+                            <li><a href="/mission">Mission Statement</a></li>
+                            
+                            <li><a href="/charity">Charity</a></li>
+
                             <li><a href="contact/create">Contact</a></li>
 
                         </ul>
@@ -379,7 +383,7 @@
                                 <img src="/img/counter-img/coffee.svg" alt="" class="img-responsive counter--image">
                             </div>
                             <div class="counter--content">
-                                <p class="counter--num CounterUP"></p>
+                                <p class="counter--num CounterUP">{{ $coffee }}</p>
                                 <p>Coffee' Consumed</p>
                             </div>
                         </div>
@@ -405,7 +409,7 @@
                                 <img src="/img/counter-img/affected.svg" alt="" class="img-responsive counter--image">
                             </div>
                             <div class="counter--content">
-                                <p class="counter--num CounterUP"></p>
+                                <p class="counter--num CounterUP">{{ $pageViews }}</p>
                                 <p>People Affected</p>
                             </div>
                         </div>
