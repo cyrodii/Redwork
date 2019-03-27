@@ -80,10 +80,6 @@
 
                             <li><a href="#pricing">Pricing</a></li>
 
-                            <li><a href="/mission">Mission Statement</a></li>
-                            
-                            <li><a href="/charity">Charity</a></li>
-
                             <li><a href="/contact">Contact</a></li>
 
                         </ul>
