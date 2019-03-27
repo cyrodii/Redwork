@@ -19,7 +19,6 @@
                                     <meta name="csrf-token" content="{{ csrf_token() }}">
                                     <div class="botui-app-container" id="quote-bot">
                                             <bot-ui></bot-ui>
-                                            <bot-popup></bot-popup>
                                     </div>
                             </div>
 

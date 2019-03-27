@@ -178,6 +178,7 @@
             delay: slightDelay,
             content: 'Give us some clues as to what you want:'
         }).then(function () {
+            window.scrollBy(0, 100);
             bot.action.select({
             action: {
                 placeholder : "Select all that apply", 
@@ -191,7 +192,6 @@
                                 {value: 70, text : "I need to use it to build customer loyalty" },
                                 {value: 130, text : "I need to reach people in many languages" },
                                 {value: 160, text : "I need somewhere to promote my latest product/service    " },
-                                {value: 70, text : "I have my own reasons" },
                             ],
                 button: {
                     icon: 'check',
@@ -203,26 +203,7 @@
                 siteNeedsValues = res.value.split(",").map(Number);
                 siteNeedsText = res.text.split(",")
                 console.log(siteNeedsValues);
-                if(res.text.includes("I have my own reasons")){
-                    bot.message.bot({
-                        loading: true,
-                        delay: slightDelay,
-                        content: 'And those reasons being?'
-                    }).then(function () {
-                        return bot.action.text({
-                            action: {
-                                size: 30,
-                                placeholder: 'Reasons'
-                            }
-                        }).then(function (r) {
-                            siteNeedsValues += ', '+ r.value;
-                        })
-                    }).then(function () {
-                        getPitch();
-                    })
-                } else {
                     end();
-                }
             });
         });
     }
