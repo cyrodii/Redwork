@@ -84,7 +84,7 @@
                             
                             <li><a href="/charity">Charity</a></li>
 
-                            <li><a href="contact/create">Contact</a></li>
+                            <li><a href="/contact">Contact</a></li>
 
                         </ul>
                     </div>
