@@ -40,5 +40,6 @@ class getPageViews extends Command
     public function handle()
     {
         $this->cloudflare->getPageViews();
+        echo $this->cloudflare->getPageViews();
     }
 }

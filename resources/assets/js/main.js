@@ -431,7 +431,9 @@
     });
 })(jQuery);
 
-jQuery(document).ready(function(jQuery) {            
+jQuery(document).ready(function(jQuery) {      
+    $("#load").fadeOut();
+    $('#loading').delay(0).fadeOut('slow');      
     var topMenu = jQuery("#top-menu"),
         offset = 40,
         topMenuHeight = topMenu.outerHeight()+offset,
@@ -478,4 +480,5 @@ jQuery(document).ready(function(jQuery) {
        }
        
     })
+    
 })

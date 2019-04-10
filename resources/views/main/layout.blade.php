@@ -70,7 +70,7 @@
                     <!-- Header Nav Start -->
                     <div id="headerNav" class="navbar-collapse collapse">
                         <div class="header--login-btn">
-                            <a href="/" class="btn--primary btn--ripple">Login</a>
+                            <a href="/login" class="btn--primary btn--ripple">Login</a>
                         </div>
                         
                         <ul class="nav navbar-nav navbar-right" id="top-menu">

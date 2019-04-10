@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-    $schedule->command('cf:getPageViews')->daily();
+    $schedule->command('cf:getPageViews')->hourly();
     $schedule->command('consumeCoffee')->twiceDaily(1, 13);
      
     }

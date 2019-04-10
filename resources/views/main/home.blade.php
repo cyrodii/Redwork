@@ -69,10 +69,17 @@
                     </div>
                     <!-- Header Nav Start -->
                     <div id="headerNav" class="navbar-collapse collapse">
+
+                        @if (Auth::check())
+                        <div class="header--login-btn">
+                            <a href="{{ route('dashboard') }}" class="btn--primary btn--ripple">{{ Auth::user()->username }}</a>
+                        </div>                          
+                        @else
                         <div class="header--login-btn">
                             <a href="quote" class="btn--primary btn--ripple">Request a Quote</a>
                         </div>
-                        
+                        @endif
+                      
                         <ul class="nav navbar-nav navbar-right" id="top-menu">
                             <li class="active"><a href="#banner">Home</a></li>
 
@@ -552,7 +559,7 @@
                                 <li><a href="charity"><i class="fa fm fa-angle-double-right"></i>Charity</a></li>
                                 <li><a href="privacy"><i class="fa fm fa-angle-double-right"></i>Privacy</a></li>
                                 <li><a href="quote"><i class="fa fm fa-angle-double-right"></i>Get me a Quote</a></li>
-                                <li><a href="contact/create"><i class="fa fm fa-angle-double-right"></i>Contact Us</a></li>
+                                <li><a href="contact"><i class="fa fm fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- Footer Links Widget End -->

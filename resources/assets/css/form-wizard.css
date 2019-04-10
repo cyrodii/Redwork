@@ -1,164 +1,70 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-* {
-	margin: 0;
-	padding: 0;
-	cursor: default;
-	box-sizing: border-box;
-	cursor: default;
-	outline: none;
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }
 
-*:focus {
-	outline: none;
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
 
-
-body {
-	font-family: Montserrat, sans-serif;
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
 }
 
-#step {
-    display: none;
-    visibility: hidden;
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
 }
 
-#step::before {
-    display: none;
-    visibility: hidden;
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
-#step::after {
-    display: none;
-    visibility: hidden;
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
 }
 
-.sleep {
-    visibility: hidden;
-    display: none; 
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
 }
 
-.rest {
-    visibility: hidden;
-    display: none; 
-}
-
-.wake {
-	opacity: 1;
-}
-
-p {
-	position: relative;
-	z-index: 2;
-	font-family: Montserrat, sans-serif;
-	font-size: 3rem;
-	line-height: 3rem;
-	height: 5rem;
-	-webkit-transition: 1s ease-out .5s;
-	transition: 1s ease-out .5s;
-}
-
-#type {
-	height: auto;
-	margin: 2rem 0;
-}
-
-.collapsed {
-    visibility: hidden;
-    display: none; ;  
-}
-
-[contenteditable] {
-	color: #b33939;
-	border: 0 solid #232c3b;
-	border-width: 0 .1rem;
-    padding: 0 1em;
-    margin-top: 10rem;
-	-webkit-transition: 1s ease-out;
-	transition: 1s ease-out;
-}
-
-[contenteditable]:focus {
-	color: black;
-	border-color: #232c3b
-}
-
-input[type=button] {
-	position: relative;
-	top: 0rem;
-	font-family: Montserrat, sans-serif;
-	font-size: 2rem;
-	font-weight: 700;
-	color: hsl(330, 10%, 25%);
-	background: transparent;
-	border: .2rem solid hsl(330, 10%, 25%);
-	border-radius: .75rem;
-	padding: 0.5rem 1rem;
-	box-shadow: 0 0 0 hsl(330, 10%, 5%);
-	-webkit-transition: 1s ease-out;
-	transition: 1s ease-out;
-	cursor: pointer;
-}
-
-input[type=button]:hover {
-	top: -.5rem;
-	color: black;
-	border: .2rem solid #232c3b;
-	box-shadow: 0 .5rem 0.5rem hsl(330, 10%, 5%);
-}
-
-input[type=text],
-input[type=email] {
-	font-family: Montserrat, sans-serif;
-	font-size: 1.5rem;
-	line-height: 2.5rem;
-    color: black;
-    margin-top: 10rem;
-	background: transparent;
-	border: 0 solid hsl(330, 10%, 25%);
-	border-width: 0 0 .1rem 0;
-	width: 5em;
-	-webkit-transition: 1s ease-out;
-	transition: 1s ease-out;
-}
-
-.click {
-	cursor: pointer;
-}
-
-body.wait .click {
-	cursor: default;
-}
-
-.pulse {
-	-webkit-animation: pulse 2s infinite linear;
-	        animation: pulse 2s infinite linear;
-}
-
-.pulse:hover {
-	-webkit-animation: none;
-	        animation: none;
-}
-
-@-webkit-keyframes pulse {
-	0% {
-		opacity: .25;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: .25;
-	}
-}
-
-@keyframes pulse {
-	0% {
-		opacity: .25;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: .25;
-	}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }

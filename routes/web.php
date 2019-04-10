@@ -11,36 +11,36 @@
 |
 */
 
-// Route::get('/', 'PagesController@home');
-// Route::get('/contact', 'PagesController@contact');
-Route::get('/about', 'PagesController@about');
-
-Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
-Route::patch('/tasks/{task}', 'ProjectTasksController@update');
-
 /*
   Main Page Controller Routes
 */
 
-Route::get('/', 'MainController@index');
-Route::post('/', 'MainController@store');
-Route::get('/getPageViews', 'MainController@getPageViews');
-Route::get('/charity', 'MainController@charity');
-Route::get('/mission', 'MainController@mission_statement');
-Route::get('/privacy', 'MainController@privacy');
+Auth::routes(['verify' => true]);
 
-/*
-  Contact Controller Routes
-*/
-Route::resource('contact', 'ContactController'); 
+Route::group(['namespace' => 'Home'], function(){
+  Route::get('/', 'MainController@index');
+  Route::post('/', 'MainController@store');
+  Route::get('/getPageViews', 'MainController@getPageViews');
+  Route::get('/charity', 'MainController@charity');
+  Route::get('/mission', 'MainController@mission_statement');
+  Route::get('/privacy', 'MainController@privacy');
+  
+  Route::resource('contact', 'ContactController'); 
+  Route::resource('quote', 'QuoteController');
+  Route::resource('projects', 'ProjectsController');
+});
+
+Route::group(['middleware' => 'auth', 'namespace' => 'admin'], function(){
+  Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+});
 
 /*
   Quote Controller Routes
 */
-Route::resource('quote', 'QuoteController');
-
-Route::resource('projects', 'ProjectsController');
 
 
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::get('/test', 'MainController@test');

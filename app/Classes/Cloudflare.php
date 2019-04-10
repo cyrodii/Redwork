@@ -18,7 +18,6 @@ class Cloudflare {
     
     public function getPageViews()
     {
-
         $subtract = strtotime('-1 year');
         $since = date('Y-m-d', $subtract);
         $until = date('Y-m-d');
