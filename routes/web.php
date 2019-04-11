@@ -30,8 +30,9 @@ Route::group(['namespace' => 'Home'], function(){
   Route::resource('projects', 'ProjectsController');
 });
 
-Route::group(['middleware' => 'auth', 'namespace' => 'admin'], function(){
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
   Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+  
 });
 
 /*
@@ -40,7 +41,3 @@ Route::group(['middleware' => 'auth', 'namespace' => 'admin'], function(){
 
 
 
-
-
-
-Route::get('/test', 'MainController@test');
