@@ -16,7 +16,7 @@
 			<div class="col-6 col-sm-6 col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<div class="h1 m-0"><i class="mdi mdi-account-multiple-outline text-primary"></i><strong class="text-white"> 67</strong></div>
+						<div class="h1 m-0"><i class="mdi mdi-account-multiple-outline text-primary"></i><strong class="text-white"> 12</strong></div>
 						<div class="mb-0"> Clients</div>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 			<div class="col-6 col-sm-6 col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<div class="h1 m-0"><i class="mdi mdi-cash-multiple text-red"></i><strong class="text-white"> 76</strong></div>
+						<div class="h1 m-0"><i class="mdi mdi-cash-multiple text-red"></i><strong class="text-white"> 51</strong></div>
 						<div class="mb-0"> Total Projects</div>
 					</div>
 				</div>
@@ -203,11 +203,14 @@
 									</tr>
 								</thead>
 								<tbody>
+									@foreach ($users as $user)
 									<tr>
-										<td>Bob Williams</td>
-										<td>$23,566</td>
-										<td>USA</td>
-									</tr>
+										<td>{{ $user->username }}</td>
+										<td>{{ $user->email }}</td>
+										<td>{{ $user->created_at }}</td>
+									</tr>								
+									@endforeach
+
 								</tbody>
 							</table>
 						</div>
