@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Project;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $data['users'] = User::all();
+        $data['projects'] = Project::latest('created_at')->limit(5)->get();
+
         return view('admin.dashboard', $data);
     }
 }
