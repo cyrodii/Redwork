@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Redwork\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Classes\Cloudflare;
+use Redwork\Classes\Cloudflare;
 
 class getPageViews extends Command
 {

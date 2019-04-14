@@ -1,10 +1,15 @@
 <?php
 
+<<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
 namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
+=======
+namespace Redwork\Http\Controllers\Admin;
+use Redwork\Http\Controllers\Controller;
+>>>>>>> parent of 069ac39... Revert "This should work lol":app/Http/Controllers/Admin/ProjectsController.php
 
 use Illuminate\Http\Request;
-use App\Project;
+use Redwork\Models\Project;
 
 
 class ProjectsController extends Controller

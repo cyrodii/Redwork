@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Redwork\Providers\AppServiceProvider::class,
+        Redwork\Providers\AuthServiceProvider::class,
+        // Redwork\Providers\BroadcastServiceProvider::class,
+        Redwork\Providers\EventServiceProvider::class,
+        Redwork\Providers\RouteServiceProvider::class,
 
     ],
 
