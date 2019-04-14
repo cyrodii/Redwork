@@ -1,12 +1,10 @@
 <?php
 
-namespace Redwork\Classes;
-
+namespace App\Classes;
 use Cloudflare\API\Auth\APIKey;
 use Cloudflare\API\Adapter\Guzzle;
 use Cloudflare\API\Endpoints\Zones;
-
-use Cache;
+use \Cache;
 
 class Cloudflare {
     
@@ -30,7 +28,7 @@ class Cloudflare {
             $data[] = $this->zones->getAnalyticsDashboard($zone->id, $since.$time, $until.$time)->totals->requests->all;
         }
         
-        if (Cache::has('pageViews')) {
+        if(Cache::has('pageViews')){
             Cache::forget('pageViews');
             Cache::add('pageViews', array_sum($data), now()->addYears(1));
         } else {

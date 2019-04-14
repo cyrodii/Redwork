@@ -1,6 +1,6 @@
 <?php
 
-namespace Redwork\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

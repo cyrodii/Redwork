@@ -1,9 +1,9 @@
 <?php
 
-namespace Redwork\Http\Controllers\Home;
-use Redwork\Http\Controllers\Controller;
+namespace App\Http\Controllers\Home;
+use App\Http\Controllers\Controller;
 
-use Redwork\Models\ContactUs;
+use App\ContactUs;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -50,7 +50,7 @@ class ContactController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Redwork\ContactUs  $ContactUs
+     * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
     public function show(ContactUs $ContactUs)
@@ -61,7 +61,7 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Redwork\ContactUs  $ContactUs
+     * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
     public function edit(ContactUs $ContactUs)
@@ -73,7 +73,7 @@ class ContactController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Redwork\ContactUs  $ContactUs
+     * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, ContactUs $ContactUs)
@@ -84,7 +84,7 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Redwork\ContactUs  $ContactUs
+     * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
     public function destroy(ContactUs $ContactUs)

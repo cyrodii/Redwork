@@ -1,27 +1,10 @@
 <?php
 
-<<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
-<<<<<<< HEAD:app/Http/Controllers/Admin/ProjectsController.php
-<<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
-<<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
-namespace App\Http\Controllers\Home;
-=======
 namespace App\Http\Controllers\Admin;
->>>>>>> parent of e051190... Revert "pushing for u jake":app/Http/Controllers/Admin/ProjectsController.php
-=======
-namespace App\Http\Controllers\Home;
->>>>>>> parent of f46a87e... pushing for u jake:app/Http/Controllers/Home/ProjectsController.php
-=======
-namespace App\Http\Controllers\Admin;
->>>>>>> parent of e051190... Revert "pushing for u jake":app/Http/Controllers/Admin/ProjectsController.php
 use App\Http\Controllers\Controller;
-=======
-namespace Redwork\Http\Controllers\Admin;
-use Redwork\Http\Controllers\Controller;
->>>>>>> parent of 069ac39... Revert "This should work lol":app/Http/Controllers/Admin/ProjectsController.php
 
 use Illuminate\Http\Request;
-use Redwork\Models\Project;
+use App\Project;
 
 
 class ProjectsController extends Controller

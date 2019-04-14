@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Redwork\Task::class, function (Faker $faker) {
+$factory->define(App\Task::class, function (Faker $faker) {
     return [
         //
     ];
