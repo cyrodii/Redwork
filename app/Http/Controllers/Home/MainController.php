@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Home;
-use App\Http\Controllers\Controller;
+namespace Redwork\Http\Controllers\Home;
+use Redwork\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use \Cache;
-use App\Classes\Cloudflare;
+use Cache;
+use Redwork\Classes\Cloudflare;
 
 class MainController extends Controller
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
+namespace Redwork\Http\Controllers\Admin;
+use Redwork\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Project;
+use Redwork\Models\Project;
 
 
 class ProjectsController extends Controller

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
+namespace Redwork\Http\Controllers\Admin;
+use Redwork\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Project;
+use Redwork\Models\User;
+use Redwork\Models\Project;
 
 class HomeController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Redwork\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

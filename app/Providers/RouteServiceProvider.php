@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Redwork\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,18 +14,15 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Redwork\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-
-        parent::boot();
+    public function boot() {
+      parent::boot();
     }
 
     /**
@@ -33,41 +30,17 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function map()
-    {
-        $this->mapApiRoutes();
+    public function map() {
+      Route::middleware(['web'])
+        ->namespace($this->namespace .'\home')
+        ->group(base_path('routes/home.php'));
 
-        $this->mapWebRoutes();
+      Route::middleware(['web', 'auth'])
+        ->namespace($this->namespace .'\Admin')
+        ->group(base_path('routes/admin.php'));
 
-        //
-    }
-
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
-    }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
-    {
-        Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+      Route::middleware(['api'])
+        ->namespace($this->namespace .'\API')
+        ->group(base_path('routes/api.php'));
     }
 }
