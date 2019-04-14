@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
 <<<<<<< HEAD:app/Http/Controllers/Admin/ProjectsController.php
 <<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
 <<<<<<< HEAD:app/Http/Controllers/Home/ProjectsController.php
@@ -10,6 +11,9 @@ namespace App\Http\Controllers\Admin;
 =======
 namespace App\Http\Controllers\Home;
 >>>>>>> parent of f46a87e... pushing for u jake:app/Http/Controllers/Home/ProjectsController.php
+=======
+namespace App\Http\Controllers\Admin;
+>>>>>>> parent of e051190... Revert "pushing for u jake":app/Http/Controllers/Admin/ProjectsController.php
 use App\Http\Controllers\Controller;
 =======
 namespace Redwork\Http\Controllers\Admin;
@@ -22,22 +26,11 @@ use Redwork\Models\Project;
 
 class ProjectsController extends Controller
 {
-    
-    public function index()
+    public function index(Project $project)
     {
-        $projects = Project::all();
-         
-        return view('projects.index', compact('projects'));
-    }
+        $projects = Project::latest('created_at')->limit(5)->get();
 
-    public function create()
-    {
-        return view('projects.create');
-    }
-
-    public function show(Project $project)
-    {
-        return view('projects.show', compact('project'));
+        return response()->json($projects);
     }
 
     public function store()
@@ -45,17 +38,12 @@ class ProjectsController extends Controller
         $validated = request()->validate([
             'title' => 'required',
             'description' => 'required',
+            'users' => 'required'
         ]);
 
         Project::create($validated);
 
-
-        return redirect('/projects');
-    }
-
-    public function edit(Project $project)
-    {
-        return view('projects.edit', compact('project'));
+        return response()->json($validated);
     }
 
     public function update(Project $project)
@@ -65,13 +53,13 @@ class ProjectsController extends Controller
        $project->description = request('description');
        $project->save();
 
-       return redirect('/projects');
+       return response()->json($projects);
     }
 
     public function destroy(Project $project)
     {
         $project->delete();
 
-        return redirect('/projects');
+        return response()->json("ok");
     }
 }
