@@ -1,9 +1,9 @@
 <?php
 
-namespace Redwork\Http\Controllers\Home;
-use Redwork\Http\Controllers\Controller;
+namespace App\Http\Controllers\Home;
+use App\Http\Controllers\Controller;
 
-use Redwork\Models\Quote;
+use App\Quote;
 use Illuminate\Http\Request;
 
 class QuoteController extends Controller
@@ -49,7 +49,7 @@ class QuoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Redwork\Quote  $Quote
+     * @param  \App\Quote  $Quote
      * @return \Illuminate\Http\Response
      */
     public function show(Quote $Quote)
@@ -60,7 +60,7 @@ class QuoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Redwork\Quote  $Quote
+     * @param  \App\Quote  $Quote
      * @return \Illuminate\Http\Response
      */
     public function edit(Quote $Quote)
@@ -72,7 +72,7 @@ class QuoteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Redwork\Quote  $Quote
+     * @param  \App\Quote  $Quote
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Quote $Quote)
@@ -83,7 +83,7 @@ class QuoteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Redwork\Quote  $Quote
+     * @param  \App\Quote  $Quote
      * @return \Illuminate\Http\Response
      */
     public function destroy(Quote $Quote)

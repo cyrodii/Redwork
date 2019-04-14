@@ -1,10 +1,10 @@
 <?php
 
-namespace Redwork\Console;
+namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Redwork\Classes\Cloudflare;
+use App\Classes\Cloudflare;
 
 class Kernel extends ConsoleKernel
 {
