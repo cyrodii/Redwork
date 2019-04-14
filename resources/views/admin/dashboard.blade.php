@@ -46,6 +46,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="row row-deck">
 			<div class="col-lg-8 col-sm-12">
 				<div class="card ">
@@ -113,11 +114,78 @@
 			</div>
 		</div>
 		<div class="row row-cards">
-			
+
 		</div>
 		<div class="row row-deck">
-			<div class="col-lg-8 col-md-12 col-sm-12 ">
-				<projects></projects>
+			<div class="col-8 grid-margin">
+				<div class="card">
+					<div class="card-header ">
+						<h3 class="card-title ">Projects</h3>
+					</div>
+					<div class="">
+						<div class="d-flex table-responsive p-3">
+							<div class="btn-group mr-2">
+							  <button class="btn btn-sm btn-primary"><i class="mdi mdi-plus-circle-outline"></i> Add</button>
+							</div>
+							<div class="btn-group mr-2">
+							  <button type="button" class="btn btn-light mr-2"><i class="mdi mdi-alert-circle-outline"></i></button>
+							  <button type="button" class="btn btn-light"><i class="mdi mdi-delete-empty"></i></button>
+							</div>
+							<div class="btn-group mr-2">
+							  <button type="button" class="btn btn-light"><i class="mdi mdi-printer"></i></button>
+							</div>
+							<div class="btn-group ml-auto mr-2 mt-1 border-0 d-none d-md-block">
+							  <input type="text" class="form-control" placeholder="Search Here">
+							</div>
+							
+						</div>
+						<div class="table-responsive border-top">
+							<table class="table card-table table-striped table-vcenter text-nowrap">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Project Name</th>
+										<th >Team</th>
+										<th>Feedback</th>
+										<th>Date</th>
+										<th>Preview</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2345</td>
+										<td>Megan Peters</td>
+										<td><div class="avatar-list avatar-list-stacked">
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/female/12.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/male/21.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/female/29.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/male/2.jpg)"></span>
+											</div>
+										</td>
+										<td>please check pricing Info </td>
+										<td class="text-nowrap">July 13, 2018</td>
+										<td class="w-1"><a href="#" class="icon"><i class="fa fa-eye"></i></a></td>
+									</tr>
+									<tr>
+										<td>4562</td>
+										<td>Phil Vance</td>
+										<td><div class="avatar-list avatar-list-stacked">
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/male/12.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/female/21.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/male/29.jpg)"></span>
+											  <span class="avatar brround" style="background-image: url(/admin/images/faces/female/2.jpg)"></span>
+											</div>
+										</td>
+										<td>New stock</td>
+										<td class="text-nowrap">June 15, 2018</td>
+										<td><a href="#" class="icon"><i class="fa fa-eye"></i></a></td>
+									</tr>
+		
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="col-lg-4 col-md-12 col-sm-12 ">
 				<div class="card" >
@@ -139,7 +207,7 @@
 									<tr>
 										<td>{{ $user->username }}</td>
 										<td>{{ $user->email }}</td>
-										<td>{{ date_format($user->created_at, 'F, jS - Y') }}</td>
+										<td>{{ $user->created_at }}</td>
 									</tr>								
 									@endforeach
 

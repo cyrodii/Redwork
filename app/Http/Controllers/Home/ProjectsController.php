@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -9,11 +9,22 @@ use App\Project;
 
 class ProjectsController extends Controller
 {
-    public function index(Project $project)
+    
+    public function index()
     {
-        $projects = Project::latest('created_at')->limit(5)->get();
+        $projects = Project::all();
+         
+        return view('projects.index', compact('projects'));
+    }
 
-        return response()->json($projects);
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+    public function show(Project $project)
+    {
+        return view('projects.show', compact('project'));
     }
 
     public function store()
@@ -21,12 +32,17 @@ class ProjectsController extends Controller
         $validated = request()->validate([
             'title' => 'required',
             'description' => 'required',
-            'users' => 'required'
         ]);
 
         Project::create($validated);
 
-        return response()->json($validated);
+
+        return redirect('/projects');
+    }
+
+    public function edit(Project $project)
+    {
+        return view('projects.edit', compact('project'));
     }
 
     public function update(Project $project)
@@ -36,13 +52,13 @@ class ProjectsController extends Controller
        $project->description = request('description');
        $project->save();
 
-       return response()->json($projects);
+       return redirect('/projects');
     }
 
     public function destroy(Project $project)
     {
         $project->delete();
 
-        return response()->json("ok");
+        return redirect('/projects');
     }
 }

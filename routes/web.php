@@ -27,12 +27,12 @@ Route::group(['namespace' => 'Home'], function(){
   
   Route::resource('contact', 'ContactController'); 
   Route::resource('quote', 'QuoteController');
+  Route::resource('projects', 'ProjectsController');
 });
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
   Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-
-  Route::apiResource('/api/projects','ProjectsController');
+  
 });
 
 /*
