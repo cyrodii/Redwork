@@ -61,7 +61,6 @@
 
 		<!-- Dashboard Core -->
 		<script src="/admin/js/vendors/jquery-3.2.1.min.js"></script>
-		<script src="/admin/js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="/admin/js/vendors/jquery.sparkline.min.js"></script>
 		<script src="/admin/js/vendors/selectize.min.js"></script>
 		<script src="/admin/js/vendors/jquery.tablesorter.min.js"></script>

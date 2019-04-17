@@ -27,7 +27,6 @@ class HomeController extends Controller
     public function index()
     {
         $data['users'] = User::all();
-        $data['projects'] = Project::latest('created_at')->limit(5)->get();
 
         return view('admin.dashboard', $data);
     }

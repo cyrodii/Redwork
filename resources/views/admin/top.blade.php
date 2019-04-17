@@ -166,7 +166,7 @@
 										<a class="dropdown-item" href="/">
 											<i class="dropdown-icon mdi mdi-compass-outline"></i> Back to Redwork
 										</a>
-										<a class="dropdown-item" href="{{ route('logout') }} href="{{ route('logout') }}"
+										<a class="dropdown-item" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 													  document.getElementById('logout-form').submit();">
 											<i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
