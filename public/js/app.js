@@ -1869,7 +1869,8 @@ __webpack_require__.r(__webpack_exports__);
       progress: 0,
       current: 0,
       color: "bg-green",
-      type: 'user'
+      type: 'user',
+      data: []
     };
   },
   methods: {
@@ -1878,6 +1879,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/stats/' + type).then(function (res) {
         var data = JSON.parse(res.data.info);
+        _this.data = res.data;
         _this.goal = data.goal;
         _this.desc = data.desc;
         _this.current = data.current;
