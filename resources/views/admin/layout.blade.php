@@ -12,6 +12,7 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<link rel="icon" href="/admin/images/favicon.svg" type="image/x-icon"/>
 		<link rel="shortcut icon" type="image/x-icon" href="/admin/images/favicon.svg" />
 
@@ -23,7 +24,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
 		<!-- Dashboard Css -->
-
 		<link href="/admin/css/dashboard.css" rel="stylesheet" />
 
 		<!-- c3.js Charts Plugin -->
@@ -37,6 +37,7 @@
 
 		<!---Font icons-->
 		<link href="/admin/plugins/iconfonts/plugin.css" rel="stylesheet" />
+		<link href="/admin/plugins/sweet-alert/sweetalert.css" rel="stylesheet" />
 	</head>
 			<div id="app">
 				@include('admin.top')

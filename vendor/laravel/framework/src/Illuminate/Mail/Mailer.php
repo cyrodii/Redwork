@@ -62,9 +62,9 @@ class Mailer implements MailerContract, MailQueueContract
     protected $to;
 
     /**
-     * The queue factory implementation.
+     * The queue implementation.
      *
-     * @var \Illuminate\Contracts\Queue\Factory
+     * @var \Illuminate\Contracts\Queue\Queue
      */
     protected $queue;
 
@@ -380,11 +380,7 @@ class Mailer implements MailerContract, MailQueueContract
             throw new InvalidArgumentException('Only mailables may be queued.');
         }
 
-        if (is_string($queue)) {
-            $view->onQueue($queue);
-        }
-
-        return $view->queue($this->queue);
+        return $view->queue(is_null($queue) ? $this->queue : $queue);
     }
 
     /**

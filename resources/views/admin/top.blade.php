@@ -141,21 +141,21 @@
 								</div>
 								<div class="dropdown mt-1">
 									<a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-										<span class="avatar avatar-md brround" style="background-image: url(/admin/images/faces/female/25.jpg)"></span>
+										<span class="avatar avatar-md bradius" style="background-image: url(https://api.adorable.io/avatars/285/cyrodii.png)"></span>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
 										<div class="text-center">
-											<a href="#" class="dropdown-item text-center font-weight-sembold user">Jessica Allan</a>
+											<a href="#" class="dropdown-item text-center font-weight-sembold user">{{ Auth::user()->username }}</a>
 											<span class="text-center user-semi-title text-dark">web designer</span>
 											<div class="dropdown-divider"></div>
 										</div>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" href="/profile/{{ Auth::user()->id }}">
 											<i class="dropdown-icon mdi mdi-account-outline "></i> Profile
 										</a>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" href="/profile/settings/{{ Auth::user()->id }}">
 											<i class="dropdown-icon  mdi mdi-settings"></i> Settings
 										</a>
-										<a class="dropdown-item" href="#">
+										<a id="vue-sendMessagePopup" class="dropdown-item" href="#">
 											<span class="float-right"><span class="badge badge-primary">6</span></span>
 											<i class="dropdown-icon mdi  mdi-message-outline"></i> Inbox
 										</a>

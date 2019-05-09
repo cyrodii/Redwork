@@ -91,4 +91,11 @@ class ContactController extends Controller
     {
         //
     }
+
+    public function get()
+    {
+        $contact = ContactUs::latest('created_at')->limit(5)->get();
+
+        return response()->json($contact);
+    }
 }

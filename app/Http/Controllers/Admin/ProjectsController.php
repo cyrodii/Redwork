@@ -21,12 +21,13 @@ class ProjectsController extends Controller
         $validated = request()->validate([
             'title' => 'required',
             'description' => 'required',
-            'users' => 'required'
+            'teamMembers' => 'required',
+            'createdBy' => 'required',
         ]);
 
         Project::create($validated);
 
-        return response()->json($validated);
+        return Project::latest('created_at')->first();
     }
 
     public function update(Project $project)
