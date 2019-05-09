@@ -61,7 +61,7 @@ export default {
     },
     methods: {
         getWeather: function (){
-            axios.get('http://api.openweathermap.org/data/2.5/forecast?id='+ city + '&appid='+ apiKey, config).then((res) => {this.weather = res.data});
+            axios.get('https://api.openweathermap.org/data/2.5/forecast?id='+ city + '&appid='+ apiKey, config).then((res) => {this.weather = res.data});
         }
     },
     mounted() {

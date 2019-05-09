@@ -55,7 +55,7 @@
             },
             addProject() {
                 var self = this;    
-                Swal.pquotesqueue([{
+                Swal.queue([{
                 title: 'Add a New Project?',
                 html:
                     '<label for="name" style="color: #000;font-weight: 700">Project Name<input id="name" class="swal2-input"></label>' +
