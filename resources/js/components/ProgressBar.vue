@@ -21,14 +21,12 @@ export default {
             current: 0,
             color: "bg-green",
             type: 'user',
-            data: []
         }
     },
     methods:{
         getProgress(type){
-            axios.get('/api/stats/'+ type).then((res) => {
-                    let data = JSON.parse(res.data.info);
-                    this.data = res.data;
+            axios.get('/api/stats/'+ type).then((res) => {            
+                    let data = JSON.parse(res.data[0].info);
                     this.goal = data.goal;
                     this.desc = data.desc;
                     this.current = data.current;

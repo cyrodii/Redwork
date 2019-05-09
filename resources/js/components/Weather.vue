@@ -65,7 +65,7 @@ export default {
         }
     },
     mounted() {
-        this.getWeather(); 
+        // this.getWeather(); 
     }
 }
 </script>

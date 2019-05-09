@@ -1869,8 +1869,7 @@ __webpack_require__.r(__webpack_exports__);
       progress: 0,
       current: 0,
       color: "bg-green",
-      type: 'user',
-      data: []
+      type: 'user'
     };
   },
   methods: {
@@ -1878,8 +1877,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/api/stats/' + type).then(function (res) {
-        var data = JSON.parse(res.data.info);
-        _this.data = res.data;
+        var data = JSON.parse(res.data[0].info);
         _this.goal = data.goal;
         _this.desc = data.desc;
         _this.current = data.current;
@@ -2254,8 +2252,7 @@ var config = {
       });
     }
   },
-  mounted: function mounted() {
-    this.getWeather();
+  mounted: function mounted() {// this.getWeather(); 
   }
 });
 

@@ -13,9 +13,9 @@ class StatsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($stats)
+    public function index()
     {
-        return Stats::where('name', $stats)->first();
+        return Stats::get();
     }
 
     /**
@@ -35,9 +35,9 @@ class StatsController extends Controller
      * @param  \App\Stats  $stats
      * @return \Illuminate\Http\Response
      */
-    public function show(Stats $stats)
+    public function show($stats)
     {
-        //
+        return Stats::where('name', $stats)->get();
     }
 
     /**
