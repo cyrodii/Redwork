@@ -49,7 +49,11 @@ class StatsController extends Controller
      */
     public function update(Request $request, Stats $stats)
     {
-        //
+        $stats->info = request('data'); 
+        $stats->name = request('data'); 
+        $stats->save();
+ 
+        return response()->json($stats);
     }
 
     /**

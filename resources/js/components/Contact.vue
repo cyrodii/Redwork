@@ -9,7 +9,7 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th colspan="2">User</th>
+                            <th>Name</th>
                             <th>Subject</th>
                             <th>Email</th>
                             <th>Date</th>
@@ -19,7 +19,6 @@
                     <tbody>
                         <tr v-for="contact in contacts" :key="contact.id">
                             <td>{{ contact.id }}</td>
-                            <td><span class="avatar brround " style='background-image: url(https://api.adorable.io/avatars/285/fff.png)'></span></td>
                             <td>{{ contact.name }}</td>
                             <td>{{ contact.subject }}</td>
                             <td>{{ contact.email }}</td>

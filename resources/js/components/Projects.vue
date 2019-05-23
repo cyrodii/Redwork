@@ -12,7 +12,7 @@
                     <input type="text" class="form-control" v-model="search" placeholder="Search Here">
                 </div>
                 
-            </div>
+            </div>              
             <div class="table-responsive border-top">
                 <table class="table card-table table-striped table-vcenter text-nowrap">
                     <thead>
@@ -24,7 +24,7 @@
                             <th>Preview</th>
                         </tr>
                     </thead>
-                        <project-item v-bind:projects="filteredProject" />
+                        <project-item v-bind:projects="filteredProject" :user="user" />
                 </table>
             </div>
         </div>
@@ -36,20 +36,17 @@
     import Swal from 'sweetalert2';
     export default {
         name: "Projects",
+        props: ['user'],
         components: {
-            ProjectItem
+            ProjectItem,
         },
     data() {
             return {
                     projects: [],
-                    user: [],
                     search: ''
                 }
         },
         methods: {
-            checkAuth () {
-                axios.get('/api/checkAuth').then((res) => {this.user = res.data});
-            },
             getProjects () {
                 axios.get('/api/projects').then((res) => {this.projects = res.data});
             },
@@ -103,7 +100,6 @@
         },
         mounted () {
             this.getProjects();
-            this.checkAuth();
         },
         computed: {
             filteredProject() {

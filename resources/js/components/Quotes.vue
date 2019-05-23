@@ -9,7 +9,7 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th colspan="2">User</th>
+                            <th>Name</th>
                             <th colspan="2">Quote</th>
                             <th>Email</th>
                             <th>Date</th>
@@ -19,7 +19,6 @@
                     <tbody>
                         <tr v-for="quote in quotes" :key="quote.id">
                             <td>{{ quote.id }}</td>
-                            <td><span class="avatar brround " style='background-image: url(https://api.adorable.io/avatars/285/fff.png)'></span></td>
                             <td>{{ quote.name }}</td>
                             <td colspan="2">{{ quote.cost }}</td>
                             <td>{{ quote.email }}</td>

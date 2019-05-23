@@ -76,7 +76,7 @@
                         </div>                          
                         @else
                         <div class="header--login-btn">
-                            <a href="quote" class="btn--primary btn--ripple">Request a Quote</a>
+                            <a href="contact" class="btn--primary btn--ripple">Request a Quote</a>
                         </div>
                         @endif
                       
@@ -304,7 +304,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=emerald" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->
@@ -337,7 +337,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=ruby" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->
@@ -366,7 +366,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=diamond" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->

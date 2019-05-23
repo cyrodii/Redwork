@@ -14,51 +14,14 @@
 
 		<div class=" col-lg-12">
 			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-3">
-					<progress-bar></progress-bar>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="card-value float-right stamp stamp-lg  bg-warning "><i class="fa fa-shopping-cart"></i></div>
-							<h3 class="mb-1 text-white">567</h3>
-							<div class="text-muted">Total Sales</div>
-							<div class="progress progress-md mt-4">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 57%"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="card-value float-right bg-info stamp stamp-lg"><i class="fa fa-briefcase"></i></div>
-							<h3 class="mb-1 text-white">56</h3>
-							<div class="text-muted">Total Projects</div>
-							<div class="progress progress-md mt-4">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 70%"></div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="card-value float-right stamp stamp-lg bg-secondary"><i class="fa fa-usd"></i></div>
-							<h3 class="mb-1 text-white">567</h3>
-							<div class="text-muted">Today Income</div>
-							<div class="progress progress-md mt-4">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" style="width: 87%"></div>
-							</div>
-						</div>
-					</div>
-				</div>
+					<progress-bar v-bind:type="'user'"></progress-bar>
+					<totals-widget v-bind:type="'tips'"></totals-widget>
+					<totals-widget v-bind:type="'paycheques'"></totals-widget>
 			</div>
 		</div>
 		<div class="row row-deck">
 			<div class="col-lg-8 col-sm-12">
-				<projects></projects>
+				<projects v-bind:user="user"></projects>
 			</div>
 			<div class="col-lg-4 col-sm-12">
 				<weather></weather>

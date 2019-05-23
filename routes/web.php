@@ -33,8 +33,16 @@ Route::group(['namespace' => 'Home'], function(){
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
   Route::get('/dashboard', 'HomeController@index')->name('dashboard');
   
-  Route::apiResource('/api/stats', 'StatsController');
+  /* Stats Api Routes */
+  Route::resource('/api/stats', 'StatsController');
   Route::get('/api/stats/{stat}', 'StatsController@show');
+  Route::post('/api/stats/{stat}', 'StatsController@update');
+
+  /* Totals Api Controller */
+  Route::resource('/api/totals', 'TotalsController');
+  Route::get('/api/totals/{total}', 'TotalsController@show');
+
+
   Route::resource('/api/projects','ProjectsController');
   Route::apiResource('/api/quote','QuoteController');
   Route::get('/api/checkAuth', function(){ return Auth::user(); });
