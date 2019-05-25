@@ -16,7 +16,7 @@
 			<div class="row">
 					<progress-bar v-bind:type="'user'"></progress-bar>
 					<totals-widget v-bind:type="'tips'"></totals-widget>
-					<totals-widget v-bind:type="'paycheques'"></totals-widget>
+					{{-- <totals-widget v-bind:type="'paycheques'"></totals-widget> --}}
 			</div>
 		</div>
 		<div class="row row-deck">
