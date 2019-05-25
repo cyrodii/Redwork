@@ -53,9 +53,10 @@ class ContactController extends Controller
      * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
-    public function show(ContactUs $ContactUs)
+    public function show($id)
     {
-        //
+        $contactus = ContactUs::find($id);
+        return view('forms.contact', compact('contactus'));
     }
 
     /**

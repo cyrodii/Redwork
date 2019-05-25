@@ -6,7 +6,7 @@
 					<div class="container">
 						<div class="d-flex">
 							<a class="header-brand" href="{{ route('dashboard') }}">
-								<img src="/admin/images/brand/logo.png" class="header-brand-img" alt="Viboon logo">
+								<img src="/admin/images/brand/logo.png" class="header-brand-img" alt="">
 							</a>
 							<div class=" ">
 								<form class="input-icon mt-2 ">

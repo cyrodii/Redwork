@@ -20,13 +20,12 @@ Auth::routes(['verify' => true]);
 Route::group(['namespace' => 'Home'], function(){
   Route::get('/', 'MainController@index');
   Route::post('/', 'MainController@store');
-  Route::get('/getPageViews', 'MainController@getPageViews');
   Route::get('/charity', 'MainController@charity');
   Route::get('/mission', 'MainController@mission_statement');
   Route::get('/privacy', 'MainController@privacy');
 
   Route::get('/api/contact','ContactController@get');
-  Route::resource('contact', 'ContactController'); 
+  Route::resource('/forms/contact', 'ContactController'); 
   Route::resource('quote', 'QuoteController');
 });
 
@@ -41,8 +40,7 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function(){
   /* Totals Api Controller */
   Route::resource('/api/totals', 'TotalsController');
   Route::get('/api/totals/{total}', 'TotalsController@show');
-
-
+  
   Route::resource('/api/projects','ProjectsController');
   Route::apiResource('/api/quote','QuoteController');
   Route::get('/api/checkAuth', function(){ return Auth::user(); });
