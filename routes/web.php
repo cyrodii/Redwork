@@ -25,7 +25,10 @@ Route::group(['namespace' => 'Home'], function(){
   Route::get('/privacy', 'MainController@privacy');
 
   Route::get('/api/contact','ContactController@get');
-  Route::resource('/forms/contact', 'ContactController'); 
+
+  Route::resource('/forms/contact', 'ContactController');  // fix later
+  Route::resource('contact', 'ContactController');
+  
   Route::resource('quote', 'QuoteController');
 });
 
