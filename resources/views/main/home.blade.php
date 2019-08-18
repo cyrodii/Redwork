@@ -558,7 +558,7 @@
                                 <li><a href="mission"><i class="fa fm fa-angle-double-right"></i>Mission Statement</a></li>
                                 <li><a href="charity"><i class="fa fm fa-angle-double-right"></i>Charity</a></li>
                                 <li><a href="privacy"><i class="fa fm fa-angle-double-right"></i>Privacy</a></li>
-                                <li><a href="quote"><i class="fa fm fa-angle-double-right"></i>Get me a Quote</a></li>
+                                <li><a href="contact"><i class="fa fm fa-angle-double-right"></i>Get me a Quote</a></li>
                                 <li><a href="contact"><i class="fa fm fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>
