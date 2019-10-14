@@ -35,10 +35,6 @@ trait TesterTrait
      */
     public function getDisplay($normalize = false)
     {
-        if (null === $this->output) {
-            throw new \RuntimeException('Output not initialized, did you execute the command before requesting the display?');
-        }
-
         rewind($this->output->getStream());
 
         $display = stream_get_contents($this->output->getStream());
@@ -130,7 +126,7 @@ trait TesterTrait
      */
     private function initOutput(array $options)
     {
-        $this->captureStreamsIndependently = \array_key_exists('capture_stderr_separately', $options) && $options['capture_stderr_separately'];
+        $this->captureStreamsIndependently = array_key_exists('capture_stderr_separately', $options) && $options['capture_stderr_separately'];
         if (!$this->captureStreamsIndependently) {
             $this->output = new StreamOutput(fopen('php://memory', 'w', false));
             if (isset($options['decorated'])) {

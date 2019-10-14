@@ -69,9 +69,15 @@
                     </div>
                     <!-- Header Nav Start -->
                     <div id="headerNav" class="navbar-collapse collapse">
+                        @if (Auth::check())
                         <div class="header--login-btn">
-                            <a href="/login" class="btn--primary btn--ripple">Login</a>
+                            <a href="{{ route('dashboard') }}" class="btn--primary btn--ripple">{{ Auth::user()->username }}</a>
+                        </div>                          
+                        @else
+                        <div class="header--login-btn">
+                            <a href="contact" class="btn--primary btn--ripple">Request a Quote</a>
                         </div>
+                        @endif
                         
                         <ul class="nav navbar-nav navbar-right" id="top-menu">
                             <li><a href="/">Home</a></li>

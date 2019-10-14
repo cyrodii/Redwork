@@ -53,9 +53,10 @@ class ContactController extends Controller
      * @param  \App\ContactUs  $ContactUs
      * @return \Illuminate\Http\Response
      */
-    public function show(ContactUs $ContactUs)
+    public function show($id)
     {
-        //
+        $contactus = ContactUs::find($id);
+        return view('forms.contact', compact('contactus'));
     }
 
     /**
@@ -90,5 +91,12 @@ class ContactController extends Controller
     public function destroy(ContactUs $ContactUs)
     {
         //
+    }
+
+    public function get()
+    {
+        $contact = ContactUs::latest('created_at')->limit(5)->get();
+
+        return response()->json($contact);
     }
 }

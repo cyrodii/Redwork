@@ -25,6 +25,8 @@
     },
     "dependencies": {
         "botui": "^0.3.8",
+        "moment": "^2.24.0",
+        "sweetalert2": "^8.8.5",
         "vue-beautiful-chat": "^2.2.0"
     }
 }

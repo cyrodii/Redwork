@@ -42,4 +42,12 @@ class LoginController extends Controller
     {
         return 'username';
     }
+
+    public function check()
+    {
+        if(Auth::guard('api')->check()) {
+            return Auth::guard('api')->user();
+        }
+        return ['success' => false];;
+    }
 }

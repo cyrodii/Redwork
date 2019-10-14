@@ -76,7 +76,7 @@
                         </div>                          
                         @else
                         <div class="header--login-btn">
-                            <a href="quote" class="btn--primary btn--ripple">Request a Quote</a>
+                            <a href="contact" class="btn--primary btn--ripple">Request a Quote</a>
                         </div>
                         @endif
                       
@@ -304,7 +304,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=emerald" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->
@@ -337,7 +337,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=ruby" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->
@@ -366,7 +366,7 @@
                                 </div>
                             </div>
                             <div class="pricing--footer">
-                                <a href="quote?plan=diamond" class="btn--primary btn--ripple">Order Now</a>
+                                <a href="contact" class="btn--primary btn--ripple">Order Now</a>
                             </div>
                         </div>
                         <!-- Pricing Item End -->
@@ -558,7 +558,7 @@
                                 <li><a href="mission"><i class="fa fm fa-angle-double-right"></i>Mission Statement</a></li>
                                 <li><a href="charity"><i class="fa fm fa-angle-double-right"></i>Charity</a></li>
                                 <li><a href="privacy"><i class="fa fm fa-angle-double-right"></i>Privacy</a></li>
-                                <li><a href="quote"><i class="fa fm fa-angle-double-right"></i>Get me a Quote</a></li>
+                                <li><a href="contact"><i class="fa fm fa-angle-double-right"></i>Get me a Quote</a></li>
                                 <li><a href="contact"><i class="fa fm fa-angle-double-right"></i>Contact Us</a></li>
                             </ul>
                         </div>

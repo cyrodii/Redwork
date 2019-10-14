@@ -15,7 +15,9 @@ class QuoteController extends Controller
      */
     public function index()
     {
-        return view('main.quote');
+        $quotes = Quote::latest('created_at')->limit(5)->get();
+
+        return response()->json($quotes);
     }
 
     /**
